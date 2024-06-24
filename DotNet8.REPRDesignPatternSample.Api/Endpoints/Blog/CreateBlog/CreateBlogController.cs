@@ -28,7 +28,9 @@ public class CreateBlogController : ControllerBase
             await _context.Blogs.AddAsync(model);
             int result = await _context.SaveChangesAsync();
 
-            return result > 0 ? StatusCode(201, "Creating Successful.") : BadRequest("Creating Fail.");
+            return result > 0
+                ? StatusCode(201, "Creating Successful.")
+                : BadRequest("Creating Fail.");
         }
         catch (Exception ex)
         {
