@@ -5,14 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNet8.REPRDesignPatternSample.DbService.AppDbContexts
-{
-    public class AppDbContext : DbContext
-    {
-        public AppDbContext(DbContextOptions options) : base(options)
-        {
-        }
+namespace DotNet8.REPRDesignPatternSample.DbService.AppDbContexts;
 
-        public DbSet<Tbl_Blog> Blogs { get; set; }
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions options) : base(options)
+    {
     }
+
+    public DbSet<Tbl_Blog> Blogs { get; set; }
 }
