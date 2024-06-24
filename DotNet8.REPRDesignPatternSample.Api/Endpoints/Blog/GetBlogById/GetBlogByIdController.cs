@@ -2,35 +2,34 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogById
+namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogById;
+
+[Route("api/[controller]")]
+[ApiController]
+public class GetBlogByIdController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class GetBlogByIdController : ControllerBase
+    private readonly AppDbContext _context;
+
+    public GetBlogByIdController(AppDbContext context)
     {
-        private readonly AppDbContext _context;
+        _context = context;
+    }
 
-        public GetBlogByIdController(AppDbContext context)
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetBlogById(int id)
+    {
+        try
         {
-            _context = context;
+            var item = await _context.Blogs
+                .FirstOrDefaultAsync(x => x.BlogId == id);
+            if (item is null)
+                return NotFound();
+
+            return Ok(item);
         }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetBlogById(int id)
+        catch (Exception ex)
         {
-            try
-            {
-                var item = await _context.Blogs
-                    .FirstOrDefaultAsync(x => x.BlogId == id);
-                if (item is null)
-                    return NotFound();
-
-                return Ok(item);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            throw new Exception(ex.Message);
         }
     }
 }
