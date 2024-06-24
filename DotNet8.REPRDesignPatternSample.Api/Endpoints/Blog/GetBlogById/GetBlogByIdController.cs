@@ -20,8 +20,7 @@ public class GetBlogByIdController : ControllerBase
     {
         try
         {
-            var item = await _context.Blogs
-                .FirstOrDefaultAsync(x => x.BlogId == id);
+            var item = await _context.Blogs.FirstOrDefaultAsync(x => x.BlogId == id);
             if (item is null)
                 return NotFound();
 
