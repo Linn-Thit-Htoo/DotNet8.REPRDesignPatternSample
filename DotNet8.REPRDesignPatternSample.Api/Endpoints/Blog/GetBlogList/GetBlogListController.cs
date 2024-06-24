@@ -19,9 +19,7 @@ public class GetBlogListController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetBlogs()
     {
-        var dataLst = await _context.Blogs
-            .OrderByDescending(x => x.BlogId)
-            .ToListAsync();
+        var dataLst = await _context.Blogs.OrderByDescending(x => x.BlogId).ToListAsync();
         var lst = dataLst.Select(x => x.Change()).ToList();
         var model = new GetBlogListResponse { DataLst = lst };
 
