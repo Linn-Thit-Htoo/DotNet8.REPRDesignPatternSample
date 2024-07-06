@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogById;
+﻿namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogById;
 
 [Route("api/[controller]")]
 [ApiController]

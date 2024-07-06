@@ -1,5 +1,4 @@
 ﻿using DotNet8.REPRDesignPatternSample.Mapper;
-using Microsoft.EntityFrameworkCore;
 
 namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogList;
 
