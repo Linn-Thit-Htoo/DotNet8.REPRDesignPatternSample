@@ -1,7 +1,4 @@
-﻿using DotNet8.REPRDesignPatternSample.DbService.AppDbContexts;
-using DotNet8.REPRDesignPatternSample.Models.Features.Blog;
-
-namespace DotNet8.REPRDesignPatternSample.Mapper;
+﻿namespace DotNet8.REPRDesignPatternSample.Mapper;
 
 public static class ChangeModel
 {
