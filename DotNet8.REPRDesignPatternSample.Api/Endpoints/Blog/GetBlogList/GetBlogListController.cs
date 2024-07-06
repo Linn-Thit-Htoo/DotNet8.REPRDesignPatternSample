@@ -1,6 +1,4 @@
-﻿using DotNet8.REPRDesignPatternSample.Mapper;
-
-namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogList;
+﻿namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogList;
 
 [Route("api/[controller]")]
 [ApiController]
