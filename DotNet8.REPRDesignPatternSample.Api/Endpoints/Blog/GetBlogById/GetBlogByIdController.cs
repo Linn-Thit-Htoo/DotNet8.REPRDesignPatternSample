@@ -1,6 +1,4 @@
-﻿using DotNet8.REPRDesignPatternSample.DbService.AppDbContexts;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogById;
 

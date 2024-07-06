@@ -1,6 +1,4 @@
-﻿using DotNet8.REPRDesignPatternSample.DbService.AppDbContexts;
-using DotNet8.REPRDesignPatternSample.Mapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using DotNet8.REPRDesignPatternSample.Mapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.GetBlogList;

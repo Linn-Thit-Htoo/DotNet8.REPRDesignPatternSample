@@ -1,7 +1,4 @@
-﻿using DotNet8.REPRDesignPatternSample.DbService.AppDbContexts;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.CreateBlog;
+﻿namespace DotNet8.REPRDesignPatternSample.Api.Endpoints.Blog.CreateBlog;
 
 [Route("api/[controller]")]
 [ApiController]
